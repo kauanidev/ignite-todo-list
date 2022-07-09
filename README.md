@@ -9,7 +9,7 @@
 ## 💜 Tecnologias/Ferramentas utilizadas
 
 * HTML
-* SCSS
+* CSS
 * React
 
 &nbsp;
