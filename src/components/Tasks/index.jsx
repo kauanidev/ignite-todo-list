@@ -1,8 +1,10 @@
 import { Task } from "../Task"
 import styles from "./tasks.module.css"
 import { TbClipboardText } from "react-icons/tb"
+import { useTasks } from "../../hooks/useTasks"
 
-export function Tasks({ tasks, deleteTask, toggleTaskCompleted }) {
+export function Tasks() {
+    const { tasks } = useTasks();
 
     const tasksQuantity = tasks.length
     const completedTasksQuantity = tasks.filter(item => item.isCompleted === true).length
@@ -23,7 +25,7 @@ export function Tasks({ tasks, deleteTask, toggleTaskCompleted }) {
 
                 {tasks.map((item) => {
                     return(
-                        <Task deleteTask={deleteTask} toggleTaskCompleted={toggleTaskCompleted} task={item} key={item.id}/>
+                        <Task task={item} key={item.id}/>
                     )
                 })}
 

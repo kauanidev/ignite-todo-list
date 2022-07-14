@@ -2,8 +2,10 @@ import styles from "./header.module.css"
 import { AiOutlinePlusCircle } from "react-icons/ai"
 import { useState } from "react"
 import logoSvg from '../../assets/Logo.svg';
+import { useTasks } from "../../hooks/useTasks";
 
-export function Header({ addTask }) {
+export function Header() {
+    const { addTask } = useTasks();
 
     const [title , setTitle] = useState("")
 
